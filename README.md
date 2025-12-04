@@ -6,6 +6,12 @@
 
 > **Capture text from anywhere on your screen with a simple hotkey**
 
+## Demo
+
+![Lexiclip Demo](assets/locr.gif)
+
+*Press Ctrl+Shift+O to select any text on your screen - it's instantly copied to your clipboard!*
+
 
 A cross-platform OCR tool that captures text from your screen and copies it to your clipboard.
 
