@@ -6,13 +6,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 # python3-venv is needed for venv creation
 # file, wget, fuse are needed for appimagetool
 # libgl1-mesa-glx is often needed for Qt apps
-# tesseract-ocr is needed for the app itself
 RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
     python3-venv \
-    tesseract-ocr \
-    libtesseract-dev \
     file \
     wget \
     libgl1-mesa-glx \

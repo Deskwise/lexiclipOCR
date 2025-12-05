@@ -50,16 +50,16 @@ chmod +x LexiclipOCR-x86_64.AppImage
 
 ### Prerequisites
 - Python 3.10+
-- Tesseract OCR (must be installed on the system)
-    - **Linux**: `sudo apt install tesseract-ocr libtesseract-dev`
-    - **Windows**: Download and install from [UB-Mannheim/tesseract](https://github.com/UB-Mannheim/tesseract/wiki)
+- **Gemini API Key** (free tier available)
+    - Get your API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+    - Set it in the app's Settings menu, or as an environment variable: `GEMINI_API_KEY`
 
 ### Running from Source
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/lexiclip.git
-   cd lexiclip
+   git clone https://github.com/Deskwise/lexiclipOCR.git
+   cd lexiclipOCR
    ```
 
 2. Create a virtual environment:
@@ -111,19 +111,15 @@ We use PyInstaller to create standalone executables.
 
 ### macOS Build
 
-1. Install Tesseract:
-   ```bash
-   brew install tesseract
-   ```
-2. Install PyInstaller:
+1. Install PyInstaller:
    ```bash
    pip install pyinstaller
    ```
-3. Run the build command:
+2. Run the build command:
    ```bash
    pyinstaller PlasmaOCR.spec
    ```
-4. The `.app` bundle will be in the `dist/` folder.
+3. The `.app` bundle will be in the `dist/` folder.
 
 > **Note on Permissions**: On first run, macOS will prompt for **Screen Recording** and **Accessibility** permissions. You must grant these for the app to function.
 >
@@ -156,4 +152,4 @@ To ensure maximum compatibility across different Linux versions, it is best to b
 
 ## Configuration
 - **Autostart**: Can be enabled in the settings menu.
-- **Hotkeys**: Default is `Ctrl+Shift+O`. Customizable in settings.
+- **Hotkeys**: Default is `Ctrl+Shift+O`. (Customization coming soon)

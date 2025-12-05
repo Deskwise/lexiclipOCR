@@ -1,8 +1,8 @@
-# PRD — PlasmaOCR (MVP)
+# PRD — Lexiclip OCR (MVP)
 
 ## 1. Product Summary
 
-PlasmaOCR is a lightweight Linux desktop utility for instantly extracting text from screenshots and images. It is optimized for speed, simplicity, and low cost, using Gemini Flash for high‑quality but inexpensive OCR.
+Lexiclip is a lightweight cross-platform desktop utility for instantly extracting text from screenshots and images. It is optimized for speed, simplicity, and low cost, using Gemini Flash for high‑quality but inexpensive OCR.
 
 **MVP Core Workflow**
 
@@ -10,13 +10,13 @@ PlasmaOCR is a lightweight Linux desktop utility for instantly extracting text f
 
 ## 2. Target Platform
 
-- **OS**: Linux
-- **Desktop Environment**: KDE Plasma (primary)
+- **OS**: Linux, Windows, macOS
+- **Desktop Environment**: KDE Plasma (primary on Linux)
 - **Session Type**: X11 (Wayland support in roadmap)
-- **Packaging**: AppImage or Flatpak
+- **Packaging**: AppImage (Linux), .exe (Windows), .app (macOS)
 - **Tech Stack**:
   - Qt/QML for GUI
-  - Python or Rust backend
+  - Python backend
   - Gemini Flash Vision API
 
 ## 3. Target Users
@@ -37,7 +37,7 @@ Current Linux OCR workflows are slow and fragmented:
 4. Open OCR app or website
 5. Copy result
 
-This interrupts focus, slows workflow, and feels clumsy. PlasmaOCR reduces OCR to a single gesture.
+This interrupts focus, slows workflow, and feels clumsy. Lexiclip reduces OCR to a single gesture.
 
 ## 5. Primary User Journey (MVP)
 
@@ -91,12 +91,11 @@ Goal: Complete the entire flow in **1–3 seconds**.
 
 ## 7. Non‑Goals (Not in MVP)
 
-- Bounding boxes / text‑region highlighting.
+- Bounding boxes / text-region highlighting.
 - Semantic extraction (e.g., only numbers/emails/prices).
 - Summaries or translations.
-- Local OCR engine fallback (Tesseract).
-- Multi‑region selection.
-- Pro‑model tier support.
+- Multi-region selection.
+- Pro-model tier support.
 - Wayland portal integration.
 
 These will appear in the roadmap.
@@ -105,7 +104,7 @@ These will appear in the roadmap.
 
 ### 8.1 Architecture
 - **Frontend**: Qt/QML
-- **Backend**: Python or Rust
+- **Backend**: Python
 - **API Client**: Gemini Flash Vision
 - **Clipboard**: KDE‑native (KClipBoard)
 
@@ -181,21 +180,19 @@ The MVP is “done” when:
 - KWin DBus screenshot backend.
 - Dual‑backend auto‑detection.
 
-### Phase 5 — Local Offline Mode
-- Tesseract fallback.
-- GPU‑accelerated OCR option (PaddleOCR / EasyOCR).
+### Phase 5 - Local Offline Mode
+- Local OCR fallback for offline use.
 
-### Phase 6 — Power Features
+### Phase 6 - Power Features
 - Annotate screenshot.
 - Text redaction.
-- Auto‑language detection.
-- OCR + auto‑save to Notes/Kate.
-- Hotkey‑based instant action modes:
-  - “OCR + translate”
-  - “OCR + summarize”
-  - “OCR + copy Markdown”
+- Auto-language detection.
+- OCR + auto-save to Notes.
+- Hotkey-based instant action modes:
+  - OCR + translate
+  - OCR + summarize
+  - OCR + copy Markdown
 
-### Phase 7 — Cross‑platform (if wanted)
+### Phase 7 - Cross-platform
 - Windows version.
 - macOS version.
-- GTK or Electron alternative UI.

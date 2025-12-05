@@ -4,11 +4,11 @@ __pycache__/
 *$py.class
 venv/
 .env
+!.env.example
 
 # Distribution / Packaging
 build/
 dist/
-*.spec
 *.AppImage
 AppDir/
 appimagetool-*.AppImage

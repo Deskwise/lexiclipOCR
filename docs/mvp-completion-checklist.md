@@ -1,4 +1,4 @@
-# PlasmaOCR MVP Completion Checklist
+# Lexiclip MVP Completion Checklist
 
 **Last Updated:** 2025-11-25  
 **Target Platform:** Linux (KDE Plasma on X11, Ubuntu LTS)  
